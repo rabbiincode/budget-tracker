@@ -51,8 +51,7 @@ Approximately 6-8 hours building the app, including designing the form, implemen
 ## Demo
 
 ## 🔗 Links
-[![Live Url](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](budgetly-tracker-app.vercel.app)
-
+[![Live Site](https://img.shields.io/badge/Live-Site-blue?style=for-the-badge&logo=vercel&logoColor=white)](https://budgetly-tracker-app.vercel.app)
 
 ## Deployment
 
