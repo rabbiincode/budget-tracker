@@ -1,25 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Grid from "@mui/material/Grid";
+import Main from "./components/Main/Main";
+import Details from "./components/Details/Details";
+import useStyles from "./styles";
 
 function App() {
+  const classes = useStyles();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Grid
+      container
+      spacing={0}
+      alignItems="center"
+      justifyContent="center"
+      className={classes.grid}
+      style={{ height: "100vh" }}
+    >
+      <Grid spacing={12} size={{ sm: 4 }} className={classes.mobile}>
+        <Details title="Income" />
+      </Grid>
+
+      <Grid spacing={12} size={{ sm: 3 }} className={classes.main}>
+        <Main />
+      </Grid>
+
+      <Grid spacing={12} size={{ sm: 4 }} className={classes.last}>
+        <Details title="Expense" />
+      </Grid>
+    </Grid>
   );
 }
 
