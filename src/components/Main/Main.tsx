@@ -1,16 +1,16 @@
-import { useContext } from "react";
-import {
-  Card,
-  CardHeader,
-  CardContent,
-  Typography,
-  Grid,
-  Divider,
-} from "@mui/material";
-import { ExpenseTrackerContext } from "../../context/context";
 import Form from "./Form/Form";
 import List from "./List/List";
 import InfoCard from "../InfoCard";
+import { useContext } from "react";
+import { ExpenseTrackerContext } from "../../context/context";
+import {
+  Card,
+  Grid,
+  Divider,
+  Typography,
+  CardHeader,
+  CardContent,
+} from "@mui/material";
 import useStyles from "./styles";
 
 const Main = () => {

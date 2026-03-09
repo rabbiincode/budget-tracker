@@ -1,15 +1,15 @@
 import { useContext } from "react";
-import {
-  List as MUIList,
-  ListItem,
-  ListItemAvatar,
-  Avatar,
-  ListItemText,
-  IconButton,
-  Slide,
-} from "@mui/material";
 import { Delete, MoneyOff } from "@mui/icons-material";
 import { ExpenseTrackerContext } from "../../../context/context";
+import {
+  Slide,
+  Avatar,
+  ListItem,
+  IconButton,
+  ListItemText,
+  ListItemAvatar,
+  List as MUIList,
+} from "@mui/material";
 import useStyles from "./styles";
 
 const List = () => {

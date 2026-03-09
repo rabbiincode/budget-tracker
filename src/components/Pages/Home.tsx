@@ -12,7 +12,6 @@ const Home = () => {
       alignItems="center"
       justifyContent="center"
       className={classes.grid}
-      style={{ height: "100vh" }}
     >
       <Grid spacing={12} size={{ md: 12, lg: 4 }}>
         <Details title="Income" />

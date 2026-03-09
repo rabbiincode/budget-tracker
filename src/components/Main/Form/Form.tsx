@@ -1,21 +1,23 @@
 import { useState, useContext } from "react";
-import {
-  TextField,
-  Grid,
-  Button,
-  FormControl,
-  InputLabel,
-  Select,
-  MenuItem,
-} from "@mui/material";
 import { v4 as uuidv4 } from "uuid";
 import Snackbar from "../../Snackbar/Snackbar";
 import formatDate from "../../../utils/formatDate";
 import { ExpenseTrackerContext } from "../../../context/context";
+
 import {
   incomeCategories,
   expenseCategories,
 } from "../../../utils/constants/categories";
+
+import {
+  Grid,
+  Button,
+  Select,
+  MenuItem,
+  TextField,
+  InputLabel,
+  FormControl,
+} from "@mui/material";
 import useStyles from "./styles";
 
 type FormData = {

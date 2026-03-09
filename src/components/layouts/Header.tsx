@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
 import MenuIcon from "@mui/icons-material/Menu";
 import AppsIcon from "@mui/icons-material/Apps";
 import SettingsIcon from "@mui/icons-material/Settings";
@@ -48,7 +47,7 @@ export const Header = ({ toggleSidebar }: { toggleSidebar: () => void }) => {
       <Stack
         direction="row"
         spacing={5}
-        sx={{ minWidth: "250px", p: "2rem", alignItems: "center" }}
+        sx={{ minWidth: "200px", p: "2rem", alignItems: "center" }}
       >
         <Box
           sx={{
@@ -83,7 +82,6 @@ export const Header = ({ toggleSidebar }: { toggleSidebar: () => void }) => {
           gap: "1rem",
           px: "2rem",
           borderBottom: "1px solid #D9E5F2",
-          borderLeft: "1px solid #D9E5F2",
           alignItems: "center",
         }}
       >

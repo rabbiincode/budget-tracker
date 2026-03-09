@@ -42,7 +42,7 @@ export const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
   return (
     <Box
       sx={{
-        width: "250px",
+        width: "200px",
         height: "100vh",
         bgcolor: "#FFFFFF",
         borderRight: "1px solid #D9E5F2",

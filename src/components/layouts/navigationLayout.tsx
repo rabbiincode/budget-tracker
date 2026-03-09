@@ -19,7 +19,6 @@ const NavigationLayout = () => {
         sx={{
           ml: sidebarOpen ? "250px" : 0,
           transition: "all 0.2s ease",
-          p: "2rem",
         }}
       >
         <Routes>

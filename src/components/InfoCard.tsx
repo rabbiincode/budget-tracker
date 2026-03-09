@@ -5,7 +5,7 @@ const InfoCard = () => {
     <Typography
       style={{
         textAlign: "center",
-        padding: "20px",
+        padding: "1.25rem",
         boxShadow: "0 2px 5px rgba(0,0,0,0.3)",
         borderRadius: "8px",
         backgroundColor: "#fff",
