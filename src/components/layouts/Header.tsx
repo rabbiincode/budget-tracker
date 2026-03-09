@@ -1,20 +1,20 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import {
-  Box,
-  Stack,
-  Typography,
-  IconButton,
-  Menu,
-  MenuItem,
-} from "@mui/material";
-
+import MenuIcon from "@mui/icons-material/Menu";
 import AppsIcon from "@mui/icons-material/Apps";
 import SettingsIcon from "@mui/icons-material/Settings";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import MenuIcon from "@mui/icons-material/Menu";
+
+import {
+  Box,
+  Menu,
+  Stack,
+  MenuItem,
+  Typography,
+  IconButton,
+} from "@mui/material";
 
 export const Header = ({ toggleSidebar }: { toggleSidebar: () => void }) => {
   const navigate = useNavigate();
@@ -47,15 +47,27 @@ export const Header = ({ toggleSidebar }: { toggleSidebar: () => void }) => {
     >
       <Stack
         direction="row"
-        spacing={2}
-        sx={{ minWidth: "280px", p: "2rem", alignItems: "center" }}
+        spacing={5}
+        sx={{ minWidth: "250px", p: "2rem", alignItems: "center" }}
       >
         <Box
-          component="img"
-          src="/assets/logo.png"
-          alt="logo"
-          sx={{ width: "2.5rem", height: "100%" }}
-        />
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            gap: "0.5rem",
+          }}
+        >
+          <Box
+            component="img"
+            src="/assets/logo.png"
+            alt="logo"
+            sx={{ width: "2.5rem", height: "100%" }}
+          />
+
+          <Typography variant="h5" sx={{ whiteSpace: "nowrap" }}>
+            Budgetly
+          </Typography>
+        </Box>
 
         <IconButton onClick={toggleSidebar}>
           <MenuIcon />
@@ -112,11 +124,11 @@ export const Header = ({ toggleSidebar }: { toggleSidebar: () => void }) => {
           >
             <Box>
               <Typography fontSize="0.85rem" fontWeight={600}>
-                Paul Cornelius
+                John Doe
               </Typography>
 
               <Typography fontSize="0.75rem" color="#718096">
-                Paul@dstrct.com
+                john@tracker.com
               </Typography>
             </Box>
 

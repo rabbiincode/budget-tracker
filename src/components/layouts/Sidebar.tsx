@@ -1,8 +1,8 @@
-import { useNavigate, useLocation } from "react-router-dom";
 import HomeIcon from "@mui/icons-material/Home";
 import GavelIcon from "@mui/icons-material/Gavel";
 import HistoryIcon from "@mui/icons-material/History";
 import { Box, Stack, Typography } from "@mui/material";
+import { useNavigate, useLocation } from "react-router-dom";
 import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
 
 const NavItem = ({ icon, label, active, onClick }: any) => (
@@ -65,22 +65,22 @@ export const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
         <NavItem
           icon={<HistoryIcon fontSize="small" />}
           label="History"
-          active={pathname === "/pages/history"}
-          onClick={() => go("/pages/history")}
+          active={pathname === "/history"}
+          onClick={() => go("/history")}
         />
 
         <NavItem
           icon={<AccountBalanceWalletIcon fontSize="small" />}
           label="Savings"
-          active={pathname === "/pages/savings"}
-          onClick={() => go("/pages/savings")}
+          active={pathname === "/savings"}
+          onClick={() => go("/savings")}
         />
 
         <NavItem
           icon={<GavelIcon fontSize="small" />}
           label="Money Rules"
-          active={pathname === "/pages/money-rules"}
-          onClick={() => go("/pages/money-rules")}
+          active={pathname === "/money-rules"}
+          onClick={() => go("/money-rules")}
         />
       </Stack>
     </Box>

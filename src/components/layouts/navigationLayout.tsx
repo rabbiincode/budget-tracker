@@ -1,18 +1,16 @@
 import { useState } from "react";
+import Home from "../Pages/Home";
 import { Header } from "./Header";
+import Pages from "../Pages/Pages";
 import { Sidebar } from "./Sidebar";
 import { Box } from "@mui/material";
-import { BrowserRouter } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
-export default function NavigationLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+const NavigationLayout = () => {
   const [sidebarOpen, setSidebarOpen] = useState(true);
 
   return (
-    <BrowserRouter>
+    <>
       <Sidebar isOpen={sidebarOpen} />
 
       <Header toggleSidebar={() => setSidebarOpen((prev) => !prev)} />
@@ -21,11 +19,18 @@ export default function NavigationLayout({
         sx={{
           ml: sidebarOpen ? "250px" : 0,
           transition: "all 0.2s ease",
-          p: '2rem',
+          p: "2rem",
         }}
       >
-        {children}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/history" element={<Pages />} />
+          <Route path="/savings" element={<Pages />} />
+          <Route path="/money-rules" element={<Pages />} />
+        </Routes>
       </Box>
-    </BrowserRouter>
+    </>
   );
 }
+
+export default NavigationLayout

@@ -1,32 +1,20 @@
-import Grid from "@mui/material/Grid";
-import Main from "./components/Main/Main";
-import Details from "./components/Details/Details";
-import useStyles from "./styles";
+import { ThemeProvider } from "@mui/styles";
+import { Provider } from "./context/context";
+import { BrowserRouter } from "react-router-dom";
+import { createTheme } from "@mui/material/styles";
+import NavigationLayout from "./components/layouts/navigationLayout";
 
-function App() {
-  const classes = useStyles();
+const App = () => {
+  const theme = createTheme();
   return (
-    <Grid
-      container
-      spacing={0}
-      alignItems="center"
-      justifyContent="center"
-      className={classes.grid}
-      style={{ height: "100vh" }}
-    >
-      <Grid spacing={12} size={{ sm: 4 }} className={classes.mobile}>
-        <Details title="Income" />
-      </Grid>
-
-      <Grid spacing={12} size={{ sm: 3 }} className={classes.main}>
-        <Main />
-      </Grid>
-
-      <Grid spacing={12} size={{ sm: 4 }} className={classes.last}>
-        <Details title="Expense" />
-      </Grid>
-    </Grid>
+    <BrowserRouter>
+      <ThemeProvider theme={theme}>
+        <Provider>
+          <NavigationLayout />
+        </Provider>
+      </ThemeProvider>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
